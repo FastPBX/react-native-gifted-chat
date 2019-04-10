@@ -249,7 +249,6 @@ class GiftedChat extends React.Component {
     }
 
     onKeyboardWillShow(e) {
-        return;
         this.setIsTypingDisabled(true);
         this.setKeyboardHeight(e.endCoordinates ? e.endCoordinates.height : e.end.height);
         this.setBottomOffset(this.props.bottomOffset);
@@ -267,7 +266,6 @@ class GiftedChat extends React.Component {
     }
 
     onKeyboardWillHide() {
-        return;
         this.setIsTypingDisabled(true);
         this.setKeyboardHeight(0);
         this.setBottomOffset(0);
@@ -285,7 +283,6 @@ class GiftedChat extends React.Component {
     }
 
     onKeyboardDidShow(e) {
-        return;
         if (Platform.OS === "android") {
             this.onKeyboardWillShow(e);
         }
@@ -293,7 +290,6 @@ class GiftedChat extends React.Component {
     }
 
     onKeyboardDidHide(e) {
-        return;
         if (Platform.OS === "android") {
             this.onKeyboardWillHide(e);
         }

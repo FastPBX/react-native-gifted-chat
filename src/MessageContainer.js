@@ -40,7 +40,6 @@ export default class MessageContainer extends React.PureComponent {
     }
 
     attachKeyboardListeners = () => {
-        return;
         const { invertibleScrollViewProps: invertibleProps } = this.props;
         Keyboard.addListener("keyboardWillShow", invertibleProps.onKeyboardWillShow);
         Keyboard.addListener("keyboardDidShow", invertibleProps.onKeyboardDidShow);
@@ -49,7 +48,6 @@ export default class MessageContainer extends React.PureComponent {
     };
 
     detachKeyboardListeners = () => {
-        return;
         const { invertibleScrollViewProps: invertibleProps } = this.props;
         Keyboard.removeListener("keyboardWillShow", invertibleProps.onKeyboardWillShow);
         Keyboard.removeListener("keyboardDidShow", invertibleProps.onKeyboardDidShow);
