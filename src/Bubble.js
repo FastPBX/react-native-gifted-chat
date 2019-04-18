@@ -195,11 +195,14 @@ export default class Bubble extends React.Component {
                         </View>
                     </TouchableWithoutFeedback>
                 </View>
-                <View style={{ margin: 3 }}>
-                    <Text style={{ fontSize: 12, color: "grey", fontWeight: "300" }}>
-                        {this.props.currentMessage.sentBy}
-                    </Text>
-                </View>
+                {this.props.currentMessage.sentBy &&
+                this.props.currentMessage.sentBy != this.props.nextMessage.sentBy ? (
+                    <View style={{ margin: 3 }}>
+                        <Text style={{ fontSize: 12, color: "grey", fontWeight: "300" }}>
+                            {this.props.currentMessage.sentBy}
+                        </Text>
+                    </View>
+                ) : null}
             </View>
         );
     }
