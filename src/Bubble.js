@@ -156,7 +156,6 @@ export default class Bubble extends React.Component {
     }
 
     render() {
-        console.log("BUBBLE PROPS", this.props);
         return (
             <View
                 style={[
